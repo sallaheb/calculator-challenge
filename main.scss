@@ -1,0 +1,41 @@
+
+*{
+  margin:0;
+  padding:0;
+}
+
+.Buttons-topsection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 20rem;
+  gap: 5px;
+}
+
+.Button-bottomsection {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  height: 5rem;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.screendisplay {
+  height: 5rem;
+  border: 1px black solid;
+  margin-bottom: 5px;
+  &__top {
+    color:white;
+    background: black;
+    width: 100vw;
+    height: 2.5rem;
+    border: 1px black solid;
+  }
+  &__bottom {
+    color:white;
+    background: black;
+    width: 100vw;
+    height: 2.5rem;
+    border: 1px black solid;
+  }
+  
+}

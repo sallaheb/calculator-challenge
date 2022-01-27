@@ -30,6 +30,39 @@
   margin-top: 4px;
 }
 
+.num {
+  border-radius: 12px;
+  font-size: 12px;
+  background-color: #524f4f;
+  color: white;
+}
+
+.operators {
+  border-radius: 12px;
+  font-size: 18px;
+  background-color: #524f4f;
+  color: white;
+  font-weight: bold;
+}
+
+#clear {
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+#delete {
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+#equalsign {
+  border-radius: 12px;
+  font-size: 18px;
+  background-color: #f58300;
+  color: white;
+  font-weight: bold;
+}
+
 .screendisplay {
   width: 300px;
   height: 5rem;

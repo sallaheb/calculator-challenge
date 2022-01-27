@@ -20,6 +20,7 @@
   grid-template-columns: repeat(4, 70px);
   height: 213px;
   gap: 5px;
+  border-radius: 10px;
 }
 
 .Button-bottomsection {

@@ -12,7 +12,7 @@
   display: grid;
   margin: 0 auto;
   justify-items: center;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .Buttons-topsection {
@@ -28,6 +28,7 @@
   height: 53px;
   gap: 5px;
   margin-top: 4px;
+  border-radius: 10px;
 }
 
 .screendisplay {

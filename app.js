@@ -78,7 +78,8 @@ const calculate = (num1, num2, operator) => {
 
 equalOperator.addEventListener('click', (event)=> {
   bottomScreen.innerHTML = calculate(num1, num2, operatorSym);
-  displayTop.innerHTML = clear(num1, num2, operatorSym)
+  displayTop.innerHTML = clear(num1, num2, operatorSym);
+  
   
 })
 

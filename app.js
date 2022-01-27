@@ -5,9 +5,10 @@ const deleteButton = document.getElementById("delete");
 const clearButton = document.getElementById("clear");
 const bottomScreen = document.querySelector('.screendisplay__bottom');
 
-let num1;
-let num2;
+let num1 = 0;
+let num2 = 0;
 let operatorSym;
+
 
 // use parent class if bubbling method is used // otherwise use child if foreach is used // create a cnst to store something using bubbling sometimes
 
@@ -39,7 +40,7 @@ for (symbol of operatorSymbols) {
     displayTop.innerHTML += event.target.innerHTML;
 
     operatorSym = event.target.innerHTML;
-
+   if (displayTop != "" && operatorSym) return;
     console.log(operatorSym);
   } )
 }
@@ -66,6 +67,15 @@ for (button of buttonsNumber) {
 
 }
 
+
+const clear = (num1, num2, operator) => {
+  if (num1 || num2 || operator) {
+    return "";
+  }
+}
+
+
+
 const calculate = (num1, num2, operator) => {
   if (operator === "+") {
     return parseInt(num1) + parseInt(num2);
@@ -80,6 +90,8 @@ const calculate = (num1, num2, operator) => {
     return parseInt(num1) / parseInt(num2);
   } else if (operator === "%") {
     return parseInt(num1) / parseInt(num2) * 100;
+  } else {
+    return;
   }
 
 }
@@ -89,9 +101,23 @@ const calculate = (num1, num2, operator) => {
 
 
 equalOperator.addEventListener('click', (event)=> {
-  bottomScreen.innerHTML = calculate(num1, num2, operatorSym)
+  bottomScreen.innerHTML = calculate(num1, num2, operatorSym);
+  displayTop.innerHTML = clear(num1,num2,operatorSym)
+
 })
 
+  
+clearButton.addEventListener('click', (event)=> {
+  bottomScreen.innerHTML = clear (num1, num2, operatorSym);
+  displayTop.innerHTML = clear (num1, num2, operatorSym);
+})
 
-
-
+// displayTop.addEventListener('input', (event)=> {
+//   // if(num1 && num2 && operatorSym) {
+//   //   return;
+//   // }
+// //   if(bottomScreen !== " ") {
+// //    num1 = 0; num2 = 0;
+// //   }
+// //   console.log(num1, num2);
+// // })

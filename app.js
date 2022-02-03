@@ -67,7 +67,7 @@ const calculate = (num1, num2, operator) => {
   } else if (operator === "÷") {
     return parseInt(num1) / parseInt(num2);
   } else if (operator === "%") {
-    return parseInt(num1) / parseInt(num2) * 100;
+    return parseInt(num1) / 100 || parseInt(num2) / 100;
   } else {
     return;
   }
